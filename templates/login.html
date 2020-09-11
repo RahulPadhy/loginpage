@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: linear-gradient(violet, blueviolet);
+        }
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 946px;
+            margin: auto;
+            padding: 53px;
+            margin-top: 120px;
+            margin-bottom: 192px;
+            /* background-color: blueviolet; */
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        
+        form h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .ip {
+            font-weight: bold;
+            margin: 20px auto;
+        }
+        
+        .input {
+            width: 400px;
+            margin: auto;
+        }
+        
+        form label {
+            padding-right: 20px;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        
+        #lblpass {
+            padding-right: 27px;
+        }
+        
+        .rcorners1 {
+            border-radius: 25px;
+            padding: 5px;
+        }
+        
+        input[type="submit"] {
+            padding: 5px;
+            width: 100px;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        
+        input[type="submit"]:hover {
+            opacity: 0.7;
+        }
+        
+        input {
+            /* display: inline-block; */
+            outline: none;
+            /* width: 500px; */
+        }
+        
+        input:focus {
+            /* background-color: crimson; */
+            border-color: crimson;
+            box-shadow: 5px 5px 5px crimson;
+        }
+        
+        #item-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* width: 100%; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form onsubmit="return checkbox()" method="POST" action="">
+            <h1>Login form</h1>
+            <div class="input">
+                <div id="item-1" class="ip">
+                    <label>User name:</label>
+                    <input class="rcorners1" type="text" name="username" required>
+                </div>
+                <div id="item-2" class="ip">
+                    <label id="lblpass">Password:</label>
+                    <input class="rcorners1" type="password" name="password" required>
+                </div>
+                <div id="item-3">
+                    <input class="rcorners1" type="submit" value="Login">
+                </div>
+                <div id="item-4" class="ip">
+                    <input type="checkbox" id="check" checked>Remember me
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function checkbox() {
+        let chbox = document.getElementById('check').checked;
+        // console.log();
+        if (!chbox) {
+            alert('ýou will not be remembered.');
+        }
+    }
+</script>
+
+</html>

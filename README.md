@@ -1,2 +1,2 @@
-# loginpage
+# Simple loginpage with database onnectivity
 
